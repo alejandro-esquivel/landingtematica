@@ -1,9 +1,36 @@
-:root{
+:root {
   --textFontSize: 1rem;
-  --biggerFontSize: 1.2rem;
+  --textBiggerFontSize: 1.4rem;
   --titleFontSize: 1.4rem;
+  --titleBiggerFontSize: 1.8rem;
   --fontColorLight: #3f3f3f;
   --fontColorDark: #f3f3f3;
-  --backgroundColorLight: #f3f3f3;
-  --backgroundColorDark: #3f3f3f;
+  --background-color-light: #f3f3f3;
+  --background-color-dark: #3f3f3f;
+}
+
+.light {
+  color: var(--fontColorLight);
+  background-color: var(--background-color-light);
+}
+
+.dark {
+  color: var(--fontColorDark);
+  background-color: var(--background-color-dark);
+}
+
+.texto-normal {
+  font-size: var(--textFontSize);
+}
+
+.texto-grande {
+  font-size: var(--textBiggerFontSize);
+}
+
+.titulo-normal {
+  font-size: var(--titleFontSize);
+}
+
+.titulo-grande {
+  font-size: var(--titleBiggerFontSize);
 }

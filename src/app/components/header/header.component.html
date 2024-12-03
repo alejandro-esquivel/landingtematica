@@ -1,0 +1,78 @@
+<div class="container mt-4">
+  <button class="btn btn-primary me-2" (click)="setLetraGrande()">Cambiar a letra {{ isLetraGrande ? 'normal' : 'grande'
+    }}</button>
+  <button class="btn btn-primary" (click)="setDarkMode()">Cambiar a modo {{ isDarkMode ? 'claro' : 'oscuro' }}</button>
+</div>
+
+<div class="container py-2 mt-2 {{ isDarkMode ? 'dark' : 'light' }}">
+  <form>
+    <div class="row">
+      <div class="mb-3">
+        <h1 class="{{ isTituloGrande ? 'titulo-grande' : 'titulo-normal' }}">Mascotas</h1>
+      </div>
+      <div class="col-3">
+        <label for="nombre" class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp"
+          [(ngModel)]="nombre">
+      </div>
+      <div class="col-3">
+        <label for="tipo" class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Tipo de
+          mascota</label>
+        <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="tipo">
+      </div>
+      <div class="col-3">
+        <label for="raza" class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Raza de
+          mascota</label>
+        <input type="text" class="form-control" id="raza" name="raza" [(ngModel)]="raza">
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <h2>Información de la mascota:</h2>
+  <p>{{ nombre != '' ? 'El nombre de tu mascota es: ' + nombre : '' }}</p>
+  <p>{{ tipo != '' ? 'El tipo de tu mascota es: ' + tipo : '' }}</p>
+  <p>{{ raza != '' ? 'La raza de tu mascota es: ' + raza : '' }}</p>
+</div>
+
+
+
+<div class="container mt-8 {{ isDarkMode ? 'dark' : 'light' }}">
+  <form>
+    <!-- Título -->
+    <div class="row">
+      <div class="mb-3">
+        <h1 class="{{ isLetraGrande ? 'titulo-grande' : 'titulo-normal' }}">Formulario de Contacto</h1>
+      </div>
+    </div>
+    <!-- Campos del formulario -->
+    <div class="row">
+      <div class="col-6">
+        <label for="nombreContacto"
+          class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Nombre</label>
+        <input type="text" class="form-control" id="nombreContacto" name="nombreContacto" [(ngModel)]="nombreContacto"
+          placeholder="Tu nombre">
+      </div>
+      <div class="col-6">
+        <label for="email" class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Correo
+          Electrónico</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email"
+          placeholder="tu@correo.com">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <label for="mensaje" class="form-label {{ isLetraGrande ? 'texto-grande' : 'texto-normal' }}">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" [(ngModel)]="mensaje" rows="4"
+          placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+    </div>
+    <!-- Botón de envío -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
