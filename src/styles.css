@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --textFontSize: 1rem;
+  --biggerFontSize: 1.2rem;
+  --titleFontSize: 1.4rem;
+  --fontColorLight: #3f3f3f;
+  --fontColorDark: #f3f3f3;
+  --backgroundColorLight: #f3f3f3;
+  --backgroundColorDark: #3f3f3f;
+}
